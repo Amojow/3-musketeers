@@ -7,7 +7,10 @@ const pkg = require('../package.json');
 const config = new Conf();
 
 updateNotifier({pkg}).notify();
-
+/**
+ * @description Defines the default currencies of cash
+ * @param {Array} argv The command's arguments
+ */
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(

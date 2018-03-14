@@ -6,7 +6,9 @@ const ora = require('ora');
 const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
-
+/**
+ * @description Convert the amounts for currencies
+ */
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
